@@ -3,7 +3,7 @@ import './App.css';
 
 class App extends Component {
 
-  constructor(props) {
+  constructor(props) { // initializing state
     super(props);
     this.state = {
       title: 'Employee Management System',
@@ -17,7 +17,7 @@ class App extends Component {
     this.refs.name.focus();
   }
 
-  fSubmit = (e) => {
+  fSubmit = (e) => { //preventing default form behavior
     e.preventDefault();
     console.log('try');
 
@@ -43,7 +43,7 @@ class App extends Component {
       act: 0
     });
 
-    this.refs.myForm.reset();
+    this.refs.myForm.reset();  //resetting form after submission
     this.refs.name.focus();
   }
 
